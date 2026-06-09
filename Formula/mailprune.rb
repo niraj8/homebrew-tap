@@ -1,14 +1,26 @@
 class Mailprune < Formula
   desc "Email triage TUI - stack inbox by sender, bulk trash/archive/unsubscribe"
   homepage "https://github.com/niraj8/mailprune"
-  url "https://github.com/niraj8/mailprune/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "eafc575419fd8b55b10e122b34f4a76cd3263362fe7e620ad1139cf2fff7604d"
+  version "0.1.1"
   license "MIT"
 
-  depends_on "rust" => :build
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/niraj8/mailprune/releases/download/v0.1.1/mailprune-v0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "e5f134f0803b9abcc212a251add6dcde34f636ddd57d00dee225ac5803eaf319"
+    else
+      url "https://github.com/niraj8/mailprune/releases/download/v0.1.1/mailprune-v0.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "6349dbd8ac152c5ab04782b04bf59842c11e52b3704e0a68a9248f035d75e5eb"
+    end
+  end
+
+  on_linux do
+    url "https://github.com/niraj8/mailprune/releases/download/v0.1.1/mailprune-v0.1.1-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "f4bcf2deff60bafcd1fbb2ddd4389d388fc24342ecd32de4614233bd5303ebf8"
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "mailprune"
   end
 
   test do

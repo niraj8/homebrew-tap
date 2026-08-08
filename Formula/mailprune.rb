@@ -1,22 +1,22 @@
 class Mailprune < Formula
   desc "Email triage TUI - stack inbox by sender, bulk trash/archive/unsubscribe"
   homepage "https://github.com/niraj8/mailprune"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/niraj8/mailprune/releases/download/v0.1.2/mailprune-v0.1.2-aarch64-apple-darwin.tar.gz"
-      sha256 "0682050fef1036a53b6f8dac472ed0988733fce3dd19340f5e0c82021775358c"
+      url "https://github.com/niraj8/mailprune/releases/download/v0.2.0/mailprune-v0.2.0-aarch64-apple-darwin.tar.gz"
+      sha256 "ec0455eac57767645454cdde3cd96a41f9b2f6fe13652be445f39c43f955cc1b"
     else
-      url "https://github.com/niraj8/mailprune/releases/download/v0.1.2/mailprune-v0.1.2-x86_64-apple-darwin.tar.gz"
-      sha256 "d5ce797b01f526df2c195111b85a5672d2c448a46546e354b235e5e7f19e7459"
+      url "https://github.com/niraj8/mailprune/releases/download/v0.2.0/mailprune-v0.2.0-x86_64-apple-darwin.tar.gz"
+      sha256 "a246dcc6fc2dd159597dd2609d450a2f81cd7539a1f033525da0d496c8ccf79a"
     end
   end
 
   on_linux do
-    url "https://github.com/niraj8/mailprune/releases/download/v0.1.2/mailprune-v0.1.2-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "afc6d4cf334a1f5d96d019480bb8e60067c7bcecd72efc8112b8d1dad4141e86"
+    url "https://github.com/niraj8/mailprune/releases/download/v0.2.0/mailprune-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "846c998b9996d9143b7050322698bb66bb3962822e14b22390456d24027fe863"
   end
 
   def install

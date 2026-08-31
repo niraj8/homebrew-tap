@@ -1,8 +1,8 @@
 class FileTinder < Formula
   desc "Swipe through loose files and decide, one keypress at a time, what to trash"
   homepage "https://github.com/niraj8/file-tinder"
-  url "https://github.com/niraj8/file-tinder/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "e706c58e9e00f026d3c616a3001ca869907159d79774d965adcd62df1c5c0e92"
+  url "https://github.com/niraj8/file-tinder/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "e821edab82369de95352fe9b10d7c8f1ab3419963d5190b36450eaa4a8e0ab6f"
   license "MIT"
   head "https://github.com/niraj8/file-tinder.git", branch: "main"
 
